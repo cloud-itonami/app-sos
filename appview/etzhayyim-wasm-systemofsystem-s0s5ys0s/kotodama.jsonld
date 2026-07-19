@@ -1,0 +1,63 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:sos.etzhayyim.com",
+  "accent": "#6366f1",
+  "component": {
+    "path": "component.wasm"
+  },
+  "convoSystemPrompt": "You are systemofsystem agent. Systemofsystem — AI Agent. Respond helpfully in the users language.",
+  "duties": [
+    "勤労の義務"
+  ],
+  "governance": {
+    "raci": "responsible",
+    "classification": "internal",
+    "complianceFrameworks": [
+      "sos-policy"
+    ]
+  },
+  "kpi": [
+    "credits の獲得"
+  ],
+  "name": "etzhayyim-wasm-systemofsystem-s0s5ys0s",
+  "nanoid": "s0s5ys0s",
+  "performerType": "service",
+  "profile": {
+    "agentType": "autonomous",
+    "capabilities": [
+      "domain-query",
+      "data-management"
+    ],
+    "description": "Systemofsystem — AI Agent",
+    "displayName": "Systemofsystem",
+    "isBot": true,
+    "operator": "etzhayyim.com"
+  },
+  "project": "sos",
+  "runtimeType": "worker",
+  "space": {
+    "channels": [
+      {
+        "default": true,
+        "kind": "public",
+        "name": "s0s5ys0s-feed"
+      }
+    ],
+    "joinRule": "public",
+    "name": "Systemofsystem"
+  },
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "app.bsky.feed.post",
+        "app.bsky.feed.like",
+        "app.bsky.feed.repost",
+        "app.bsky.graph.follow",
+        "com.etzhayyim.apps.sos.sosEntity",
+        "com.etzhayyim.apps.sos.sosEvent",
+        "com.etzhayyim.apps.sos.sosReport"
+      ]
+    }
+  },
+  "uiType": "appview"
+}

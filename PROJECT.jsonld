@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Project",
+  "name": "System of System Resource Intelligence (etzhayyim-project-sos)",
+  "identifier": "etzhayyim-project-sos",
+  "description": "A Threlte-driven system thinking app for sos.etzhayyim.com that maps resource stocks, causal loops, leverage points, and cross-domain dependencies as a system-of-systems.",
+  "url": "https://sos.etzhayyim.com",
+  "hasPart": [
+    {
+      "@type": "WebApplication",
+      "name": "systemofsystem",
+      "url": "https://sos.etzhayyim.com",
+      "applicationCategory": "Systems Intelligence"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "etzhayyim-wasm-systemofsystem-s0s5ys0s",
+      "programmingLanguage": [
+        "Go",
+        "TypeScript"
+      ],
+      "runtimePlatform": "SpinKube + SvelteKit",
+      "codeRepository": "https://github.com/etzhayyim/etzhayyim-root",
+      "path": "wasm/etzhayyim-wasm-systemofsystem-s0s5ys0s"
+    }
+  ],
+  "keywords": [
+    "system thinking",
+    "resources",
+    "Threlte",
+    "natad",
+    "LanceDB",
+    "causal loops"
+  ],
+  "tasks": [
+    {
+      "status": "completed",
+      "task": "Create sos.etzhayyim.com project scaffold for systemofsystem."
+    },
+    {
+      "status": "completed",
+      "task": "Design a Threlte-based 3D systems map covering resource domains and causal loops."
+    },
+    {
+      "status": "completed",
+      "task": "Define Arrow-schema-first natad metadata tables and LanceDB collection manifests."
+    }
+  ]
+}
