@@ -1,4 +1,6 @@
 {:schema "etzhayyim.repository/v1"
- :name "com-etzhayyim-app-sos"
+ :name "app-sos"
  :kind :app
- :canonical-metadata :edn}
+ :canonical-metadata :edn
+ :boundary {:role :systems-intelligence-application
+            :graph-intelligence "cloud-itonami/graph-sos-intel"}}
