@@ -165,10 +165,12 @@
     ;; ── README.md がこの検査と同じ数を言っていること ────────────────
     (let [rd (slurp* "README.md")]
       (when-not rd (cannot! "README.md が読めない（この検査が守る対象が無い）"))
-      (doseq [[label needle] [["継承 14 ファイル" "14"]
-                              ["9,411 バイト" "9,411"]
-                              ["35 個の glob" "35 個の glob"]
-                              ["追跡 16" "16"]]]
+      ;; 数字そのもの（"14" / "16"）を探すと、README のどこかに同じ桁が
+      ;; あるだけで通ってしまう。**その主張にしか出ない語**を探す。
+      (doseq [[label needle] [["custody が 14/14 一致" "14/14 一致"]
+                              ["継承バイトが 9,411" "9,411"]
+                              ["上流 glob が 35 個" "35 個の glob"]
+                              ["npm が HTTP 404" "HTTP 404"]]]
         (check! (str "README.md が " label " と書いている")
                 (str/includes? rd needle) "")))
 
