@@ -1,4 +1,4 @@
-#!/usr/bin/env nbb
+#!/usr/bin/env kbb
 ;; verify-docs-claims — README.md が主張する測定を tree に対して再検査する。
 ;;
 ;; 終了コードは 3 つある。0/1 の 2 値にしない:
@@ -11,7 +11,7 @@
 ;; 無かった検査と同じ値を返す」を避けるため。ここで 0 を返すと、
 ;; 何も読めなかった run が「異常なし」として蓄積する。
 ;;
-;; 使い方: nbb docs/verify-docs-claims.cljk        （repo ルートで）
+;; 使い方: kbb --backend sci docs/verify-docs-claims.cljk        （repo ルートで）
 
 (ns verify-docs-claims
   (:require [clojure.string :as str]

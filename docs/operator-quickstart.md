@@ -183,7 +183,7 @@ done
 `repo-search` で引くのが確実:
 
 ```bash
-(cd "$ROOT" && nbb scripts/repo-search.cljs design-system safe-builder) | head -20
+(cd "$ROOT" && kbb --backend sci scripts/repo-search.cljk design-system safe-builder) | head -20
 ```
 
 > `repo-search` は `manifest/west.yml` を **cwd から**探すので、
@@ -205,7 +205,7 @@ dig +short etzhayyim.com A | head -2
 ここまで手で見たものを、まとめて再検査する:
 
 ```bash
-nbb docs/verify-docs-claims.cljk
+kbb --backend sci docs/verify-docs-claims.cljk
 ```
 
 → `RESULT  OK 31/31 claims match the tree`、exit 0。
