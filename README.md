@@ -14,7 +14,7 @@ scaffold** であり、ビルドもデプロイもできない —— 依存が�
 「ディレクトリを開いて読む」経路では、実態と逆のことを学ぶ。
 
 計測日 2026-08-18。すべて `docs/operator-quickstart.md` の手順で再現でき、
-`docs/verify-docs-claims.cljs` が機械で再検査する。
+`docs/verify-docs-claims.cljk` が機械で再検査する。
 
 ---
 
@@ -84,7 +84,7 @@ npm registry にも無い —— 両方とも **HTTP 404**。
 
 ## 3. 3 つの散文が言っていて、tree に無いもの
 
-`docs/verify-docs-claims.cljs` が全部機械で再検査する。
+`docs/verify-docs-claims.cljk` が全部機械で再検査する。
 
 | 出典 | 主張 | 実測 |
 |---|---|---|

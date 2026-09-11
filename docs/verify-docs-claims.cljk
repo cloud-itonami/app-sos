@@ -11,7 +11,7 @@
 ;; 無かった検査と同じ値を返す」を避けるため。ここで 0 を返すと、
 ;; 何も読めなかった run が「異常なし」として蓄積する。
 ;;
-;; 使い方: nbb docs/verify-docs-claims.cljs        （repo ルートで）
+;; 使い方: nbb docs/verify-docs-claims.cljk        （repo ルートで）
 
 (ns verify-docs-claims
   (:require [clojure.string :as str]
