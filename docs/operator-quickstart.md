@@ -205,7 +205,7 @@ dig +short etzhayyim.com A | head -2
 ここまで手で見たものを、まとめて再検査する:
 
 ```bash
-nbb docs/verify-docs-claims.cljs
+nbb docs/verify-docs-claims.cljk
 ```
 
 → `RESULT  OK 31/31 claims match the tree`、exit 0。
@@ -222,7 +222,7 @@ nbb docs/verify-docs-claims.cljs
 積み上がらないようにしてある。試すなら:
 
 ```bash
-V="$PWD/docs/verify-docs-claims.cljs"
+V="$PWD/docs/verify-docs-claims.cljk"
 (cd /tmp && nbb "$V"); echo "exit=$?"    # → 3
 ```
 
