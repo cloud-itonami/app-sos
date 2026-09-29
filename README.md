@@ -9,7 +9,7 @@ scaffold** であり、ビルドもデプロイもできない —— 依存が�
 **直すとしたら何から手を付けるか**を置く。
 
 `README.edn`（機械可読な正本）は `:kind :app` / `:role :systems-intelligence-application`
-とだけ言い、`CLAUDE.md`・`PROJECT.jsonld`・`appview/README.md` の 3 つは
+とだけ言い、`AGENTS.md`・`PROJECT.jsonld`・`appview/README.md` の 3 つは
 **この repo に無いもの**を現在形で記述している。だから
 「ディレクトリを開いて読む」経路では、実態と逆のことを学ぶ。
 
@@ -35,7 +35,7 @@ scaffold** であり、ビルドもデプロイもできない —— 依存が�
 | `svelte/src/main.ts` | `mount(App, …)` の 5 行 |
 | `svelte/src/svelte.d.ts` | `*.svelte` の型宣言 |
 
-`CLAUDE.md` は App.svelte を "placeholder" と正しく呼んでいる。**そこは正確**。
+`AGENTS.md` は App.svelte を "placeholder" と正しく呼んでいる。**そこは正確**。
 問題は同じファイルが、その placeholder の周りに無いものを在るかのように書いていること。
 
 ## 2. なぜビルドできないか（依存が 2 つとも解決しない）
@@ -98,7 +98,7 @@ npm registry にも無い —— 両方とも **HTTP 404**。
 | `kotodama.jsonld` | `triggers` が 3 つの `com.etzhayyim.apps.sos.*` collection を購読 | lexicon が 1 件も無い |
 | `appview/README.md` | `etzhayyim-wasm-…/`: 「App shell and health endpoint」 | server コードが 1 行も無い |
 | `appview/README.md` | `svelte/`: 「Threlte UI for the 3D system map」 | 22 行の placeholder |
-| `CLAUDE.md` | three.js + `@threlte/*` は「documented design intent, **NOT dead deps**」 | import 0 件、かつ**インストール自体ができない** |
+| `AGENTS.md` | three.js + `@threlte/*` は「documented design intent, **NOT dead deps**」 | import 0 件、かつ**インストール自体ができない** |
 
 最後の行が一番厄介で、この文は dead-deps 掃除から依存を守るために書かれている。
 結果として、**解決できない依存が「消すな」と注記付きで保存されている。**
@@ -121,14 +121,14 @@ postcss パイプライン自体そもそも走らない。
   つまり上に並べた欠陥は**全部継承**であって、抽出が持ち込んだものは 1 つも無い。
 - `README.edn` の `:graph-intelligence "cloud-itonami/graph-sos-intel"` は
   west に登録済み（pin `5db67cff…`）で解決する。
-- `CLAUDE.md` の「この app は `@etzhayyim/kami-engine-sdk` に依存しない」は正しい。
-- `CLAUDE.md` が挙げる 2 つの参照（兄弟 `etzhayyim-project-cad/CLAUDE.md` と
+- `AGENTS.md` の「この app は `@etzhayyim/kami-engine-sdk` に依存しない」は正しい。
+- `AGENTS.md` が挙げる 2 つの参照（兄弟 `etzhayyim-project-cad/AGENTS.md` と
   ADR-2605264300）は**どちらも上流に実在する**。参照が壊れているのではなく、
   現在地の記述が実態と合っていない。
 
 ## 5. 触る前に
 
-- **`CLAUDE.md` / `PROJECT.jsonld` / `appview/README.md` を現状の説明として読まない。**
+- **`AGENTS.md` / `PROJECT.jsonld` / `appview/README.md` を現状の説明として読まない。**
   3 つとも継承物で、同じ内容が上流 `etzhayyim/root` にも在る。ここでは
   書き換えていない（custody を壊さないため）。この README が読み替え表。
 - **最初の設計判断は「2 つの依存をどう参照するか」**（§2）。それが決まるまで、

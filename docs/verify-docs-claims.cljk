@@ -23,7 +23,7 @@
 ;; 継承 14 ファイルの blob SHA。上流 etzhayyim/root@afe5f1d9 の
 ;; 60-apps/etzhayyim-project-sos（tree c86a9592…）と 14/14 一致した時点の値。
 (def ^:private INHERITED
-  [["CLAUDE.md" "f0be9348b946a9270ae3ba69be21b089148d21c2"]
+  [["AGENTS.md" "f0be9348b946a9270ae3ba69be21b089148d21c2"]
    ["NOTICE" "d41cc9adaaf43edb0f4493d1bd7fdcbb77f77281"]
    ["PROJECT.jsonld" "87c4cdc0be9d175458112c1c989fbfbbf86879c2"]
    ["appview/README.md" "92e8061562b36f578b92cfbfd2ad1c172c39ab56"]
