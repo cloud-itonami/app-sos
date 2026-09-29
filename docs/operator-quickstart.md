@@ -43,7 +43,7 @@ wc -l appview/etzhayyim-wasm-systemofsystem-s0s5ys0s/svelte/src/*
 `migration.edn` は上流とバイト数まで言い切っている。合計を出して突き合わせる:
 
 ```bash
-git ls-files -- CLAUDE.md NOTICE PROJECT.jsonld appview \
+git ls-files -- AGENTS.md NOTICE PROJECT.jsonld appview \
   | xargs wc -c | tail -1
 ```
 
@@ -131,7 +131,7 @@ REV=afe5f1d995162277d2fb98f762705b53f9f695fd
 diff <(git -C "$ROOT/orgs/etzhayyim/root" ls-tree -r \
          "$REV" -- 60-apps/etzhayyim-project-sos \
        | awk '{print $3}' | sort) \
-     <(git ls-tree -r HEAD -- CLAUDE.md NOTICE PROJECT.jsonld appview \
+     <(git ls-tree -r HEAD -- AGENTS.md NOTICE PROJECT.jsonld appview \
        | awk '{print $3}' | sort) \
   && echo "custody OK: 14/14 blob 一致"
 ```
@@ -197,7 +197,7 @@ dig +short sos.etzhayyim.com A | grep . || echo "sos.etzhayyim.com → NXDOMAIN"
 dig +short etzhayyim.com A | head -2
 ```
 
-→ 前者は解決しない（`CLAUDE.md` は "(planned)" と正しく注記しているが、
+→ 前者は解決しない（`AGENTS.md` は "(planned)" と正しく注記しているが、
 `PROJECT.jsonld` の `url` は注記なしでこのホストを指している）。後者は解決する。
 
 ## §8 機械で再検査する

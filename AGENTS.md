@@ -14,7 +14,7 @@ The canonical identity + scope is in `PROJECT.jsonld`. This file is a navigation
 
 ## Architecture (Threlte viewer)
 
-This app uses **Threlte** (not the religious-corp `@etzhayyim/kami-engine-sdk`) for its 3D visualization layer. Same pattern as `60-apps/etzhayyim-project-cad/` (per its CLAUDE.md "3D viewer 標準は Threlte"). The three.js + `@threlte/*` deps in `appview/.../svelte/package.json` are documented design intent, NOT dead deps.
+This app uses **Threlte** (not the religious-corp `@etzhayyim/kami-engine-sdk`) for its 3D visualization layer. Same pattern as `60-apps/etzhayyim-project-cad/` (per its AGENTS.md "3D viewer 標準は Threlte"). The three.js + `@threlte/*` deps in `appview/.../svelte/package.json` are documented design intent, NOT dead deps.
 
 The SDK three-free cutover (ADR-2605264300) does NOT apply to this app:
 - this app does NOT depend on `@etzhayyim/kami-engine-sdk` (no SDK in `package.json`)
@@ -37,4 +37,4 @@ Threlte-driven systems-thinking app that maps:
 - `PROJECT.jsonld` — canonical identity (schema.org/Project)
 - `kotodama.jsonld` — kotodama actor manifest
 - ADR-2605264300 (kami-engine-sdk three.js-free cutover) §2 — confirms this app's Threlte deps are KEEP not dead
-- `60-apps/etzhayyim-project-cad/CLAUDE.md` — sibling Threlte-viewer pattern
+- `60-apps/etzhayyim-project-cad/AGENTS.md` — sibling Threlte-viewer pattern
